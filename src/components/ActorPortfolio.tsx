@@ -138,7 +138,9 @@ export default function ActorPortfolio() {
 
       {/* Credits */}
       <section className="max-w-4xl mx-auto py-16 px-6">
-        <h2 className="text-lg leading-relaxed text-center">כבר עבדנו ביחד</h2>
+        <h2 className="text-lg leading-relaxed text-center">
+          בין השותפים לדרך
+        </h2>
         <ImageCarousel />
       </section>
 
