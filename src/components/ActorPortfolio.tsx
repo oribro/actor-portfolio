@@ -126,7 +126,7 @@ export default function ActorPortfolio() {
         </p>
         <video
           className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
-          src="https://youtube.com/shorts/whO3ZaSV2Rk"
+          src="https://youtube.com/embed/whO3ZaSV2Rk"
           controls
         />
       </section>
