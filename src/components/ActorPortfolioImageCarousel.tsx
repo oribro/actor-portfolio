@@ -12,18 +12,24 @@ const images: string[] = [
   "https://www.ono.ac.il/wp-content/uploads/2021/11/logo.png",
 ];
 
-export default function ImageCarousel(): JSX.Element {
+export default function ImageCarousel() {
   const [startIndex, setStartIndex] = useState(0);
+  const totalImages = images.length;
 
   const prevSlide = () => {
-    setStartIndex((prev) => (prev === 0 ? images.length - 3 : prev - 1));
+    setStartIndex((prev) => (prev - 1 + totalImages) % totalImages);
   };
 
   const nextSlide = () => {
-    setStartIndex((prev) => (prev >= images.length - 3 ? 0 : prev + 1));
+    setStartIndex((prev) => (prev + 1) % totalImages);
   };
 
-  const visibleImages = images.slice(startIndex, startIndex + 3);
+  // Get 3 images with wrap-around
+  const visibleImages = [
+    images[startIndex],
+    images[(startIndex + 1) % totalImages],
+    images[(startIndex + 2) % totalImages],
+  ];
 
   return (
     <div className="relative max-w-5xl mx-auto my-16">
