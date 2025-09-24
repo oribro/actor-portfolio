@@ -78,10 +78,9 @@ export default function ActorPortfolio() {
 
       {/* About */}
       <section className="max-w-3xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-4">עליי</h2>
+        <h2 className="text-3xl font-bold mb-4">שלום וברכה</h2>
         <p className="text-lg leading-relaxed">
-          שלום וברכה, אני אלון דה פריז, בן זקונים לרופא ואחות, מתגורר בעיר חיפה
-          ומתרוצץ בכל הארץ כ
+          אני אלון דה פריז,
           <span className="font-bold">שחקן, מאלתר, מנחה לאלתור ונגן.</span> אני
           אוהב לצחוק, לנסות להביא אמת, לאכול מנגו בשל עם הקליפה מעל הכיור
           באימפולסיביות ותשוקה באופן שמצריך סליל שלם של חוט דנטלי לאחר מכן כדי
