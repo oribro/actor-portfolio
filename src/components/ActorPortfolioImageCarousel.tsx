@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
 const images: string[] = [
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Evidl-lp9_X4JupdNpHKxhVezHiwCI0RCQ&s",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn1XjW3cFWAvhVrs8WwIwNBKYDKeObGRPP5A&s",
-  "https://improvtheater.co.il/wp-content/uploads/2023/01/improv-logo-%D7%90%D7%99%D7%9E%D7%A4%D7%A8%D7%95%D7%91-%D7%9C%D7%95%D7%92%D7%95.png",
+  "https://www.ht1.co.il/images/haifa_white_logo.png",
+  "https://incubator.org.il/wp-content/uploads/2025/04/%D7%9C%D7%95%D7%92%D7%95-%D7%90%D7%99%D7%A0%D7%A7%D7%95%D7%91%D7%98%D7%95%D7%A8.svg",
+  "https://i0.wp.com/improvtheater.co.il/wp-content/uploads/2023/02/improv.png",
   "https://www.teatron.org.il/wp-content/uploads/2022/09/logo.svg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlmImrwKLxoEt3HvVC5564UJJjqkeSWUUYXg&s",
+  "https://www.habima.co.il/wp-content/themes/tyco-wp/assets/images/HABIMA-LOGO-2023-he.png",
   "https://www.tzavta.co.il/images/top_logo.svg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzfRBuAzlpO0jWHLUaqZ39ma73Sa1T4S3qZQ&s",
+  "https://improvisrael.co.il/wp-content/uploads/2025/06/%D7%9C%D7%95%D7%92%D7%95-%D7%90%D7%99%D7%9E%D7%A4%D7%A8%D7%95%D7%91-%D7%99%D7%A9%D7%A8%D7%90%D7%9C-02-2.png",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Haifa_logo_official_apperence_dark_%28cropped%29.png/500px-Haifa_logo_official_apperence_dark_%28cropped%29.png",
   "https://www.ono.ac.il/wp-content/uploads/2021/11/logo.png",
 ];
@@ -24,11 +24,11 @@ export default function ImageCarousel() {
     setStartIndex((prev) => (prev + 1) % totalImages);
   };
 
-  // Autoplay every 3 seconds
+  // Autoplay
   useEffect(() => {
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   const visibleImages = [
     images[startIndex],
@@ -43,12 +43,12 @@ export default function ImageCarousel() {
         {visibleImages.map((img, idx) => (
           <div
             key={idx}
-            className="flex-1 flex justify-center items-center bg-white rounded-xl shadow-md p-4"
+            className="flex-1 bg-white rounded-xl shadow-md p-2 flex items-center justify-center h-36"
           >
             <img
               src={img}
               alt={`Slide ${startIndex + idx + 1}`}
-              className="max-h-24 object-contain"
+              className="w-full h-full object-contain"
             />
           </div>
         ))}
