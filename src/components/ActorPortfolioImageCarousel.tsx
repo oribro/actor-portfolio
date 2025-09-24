@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const images: string[] = [
   "https://www.ht1.co.il/images/haifa_white_logo.png",
@@ -23,6 +23,12 @@ export default function ImageCarousel() {
   const nextSlide = () => {
     setStartIndex((prev) => (prev + 1) % totalImages);
   };
+
+  // Autoplay: advance every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 3000);
+    return () => clearInterval(interval);
+  });
 
   // Get 3 images with wrap-around
   const visibleImages = [
