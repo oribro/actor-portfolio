@@ -105,9 +105,7 @@ export default function ActorPortfolio() {
           הסרטים בחיפה וזו רק ההתחלה ;)
         </p>
         <br />
-        <div className="flex items-center justify-center h-screen text-2xl">
-          ***
-        </div>
+        <div className="text-center text-gray-400 text-3xl my-8">***</div>
         <p className="text-lg leading-relaxed">
           כששואלים אותי איך הגעתי למסקנה שאני רוצה להיות שחקן אני מספר שכל השנים
           על הבמה מאחורי התופים הרגשתי בבית. היה לי נעים ונוח. מופיע, אבל מסתתר.
