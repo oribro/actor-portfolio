@@ -78,14 +78,14 @@ export default function ActorPortfolio() {
 
       {/* About */}
       <section className="max-w-3xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-4">שלום וברכה</h2>
+        <h2 className="text-3xl font-bold mb-4">שלום וברכה 🎗️</h2>
         <p className="text-lg leading-relaxed">
           אני אלון דה פריז,
           <span className="font-bold">שחקן, מאלתר, מנחה לאלתור ונגן.</span> אני
           אוהב לצחוק, לנסות להביא אמת, לאכול מנגו בשל עם הקליפה מעל הכיור
           באימפולסיביות ותשוקה באופן שמצריך סליל שלם של חוט דנטלי לאחר מכן כדי
           להתאושש ועוד.
-          <ul className="list-disc list-inside text-lg leading-relaxed">
+          <ul className="list-none p-0 m-0 text-lg leading-relaxed">
             <li>
               ⭐<span className="font-bold">פרס השחקן הטוב ביותר</span>- DEA
               Film festival, Tirana, Albania 2023 על תפקידי בסרט “Touch Me”
@@ -101,8 +101,9 @@ export default function ActorPortfolio() {
               אהרוני){" "}
             </li>
           </ul>
-          חוטא בכתיבה: בתחילת 2025 אחת היצירות המקוריות שכתבתי ושיחקתי יחד עם
-          שותפתי אור קרני, עלתה בפסטיבל הסרטים בחיפה וזו רק ההתחלה 😉
+          חוטא ב🤓<span className="font-bold">כתיבה</span>: בתחילת 2025 אחת
+          היצירות המקוריות שכתבתי ושיחקתי יחד עם שותפתי אור קרני, עלתה בפסטיבל
+          הסרטים בחיפה וזו רק ההתחלה 😉
         </p>
         <p className="text-lg leading-relaxed">
           כששואלים אותי איך הגעתי למסקנה שאני רוצה להיות שחקן אני מספר שכל השנים
