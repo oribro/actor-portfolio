@@ -120,6 +120,7 @@ export default function ActorPortfolio() {
           משהו מעניין קרה שם. ברגע שעמדתי שם על הבמה לראשונה כשחקן ולא כנגן
           ידעתי- "הכלי הבא שאלמד לנגן עליו הוא אני". והשאר היסטוריה.
         </p>
+        <div className="text-center text-gray-400 text-3xl my-8">***</div>
         <p className="text-lg leading-relaxed">
           אם הגעתם עד לכאן- הנה סרטון חביב מלפני עשור בשביל הנשמה ולמען תעמיק
           ההיכרות בינינו :)
