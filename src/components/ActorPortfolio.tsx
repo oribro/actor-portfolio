@@ -124,10 +124,12 @@ export default function ActorPortfolio() {
           אם הגעתם עד לכאן- הנה סרטון חביב מלפני עשור בשביל הנשמה ולמען תעמיק
           ההיכרות בינינו :)
         </p>
-        <video
-          className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
+        <iframe
+          className="w-full h-full rounded-2xl shadow-lg"
           src="https://youtube.com/embed/whO3ZaSV2Rk"
-          controls
+          title="Showreel"
+          frameBorder="0"
+          allowFullScreen
         />
       </section>
 
