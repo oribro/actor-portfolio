@@ -24,13 +24,12 @@ export default function ImageCarousel() {
     setStartIndex((prev) => (prev + 1) % totalImages);
   };
 
-  // Autoplay: advance every 3 seconds
+  // Autoplay every 3 seconds
   useEffect(() => {
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
-  });
+  }, []);
 
-  // Get 3 images with wrap-around
   const visibleImages = [
     images[startIndex],
     images[(startIndex + 1) % totalImages],
@@ -40,14 +39,18 @@ export default function ImageCarousel() {
   return (
     <div className="relative max-w-5xl mx-auto my-16">
       {/* Images */}
-      <div className="flex gap-4 overflow-hidden">
+      <div className="flex gap-4 justify-center overflow-hidden">
         {visibleImages.map((img, idx) => (
-          <img
+          <div
             key={idx}
-            src={img}
-            alt={`Slide ${startIndex + idx + 1}`}
-            className="w-1/3 h-48 object-cover rounded-xl shadow-md"
-          />
+            className="flex-1 flex justify-center items-center bg-white rounded-xl shadow-md p-4"
+          >
+            <img
+              src={img}
+              alt={`Slide ${startIndex + idx + 1}`}
+              className="max-h-24 object-contain"
+            />
+          </div>
         ))}
       </div>
 
