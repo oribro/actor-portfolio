@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const images = [
+const images: string[] = [
   "https://www.ht1.co.il/images/haifa_white_logo.png",
   "https://incubator.org.il/wp-content/uploads/2025/04/%D7%9C%D7%95%D7%92%D7%95-%D7%90%D7%99%D7%A0%D7%A7%D7%95%D7%91%D7%98%D7%95%D7%A8.svg",
   "https://i0.wp.com/improvtheater.co.il/wp-content/uploads/2023/02/improv.png",
@@ -12,52 +12,46 @@ const images = [
   "https://www.ono.ac.il/wp-content/uploads/2021/11/logo.png",
 ];
 
-export default function ImageCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function ImageCarousel(): JSX.Element {
+  const [startIndex, setStartIndex] = useState(0);
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setStartIndex((prev) => (prev === 0 ? images.length - 3 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setStartIndex((prev) => (prev >= images.length - 3 ? 0 : prev + 1));
   };
 
-  return (
-    <div className="relative max-w-4xl mx-auto my-16">
-      {/* Image */}
-      <img
-        src={images[currentIndex]}
-        alt={`Slide ${currentIndex + 1}`}
-        className="w-full h-96 object-cover rounded-2xl shadow-lg"
-      />
+  const visibleImages = images.slice(startIndex, startIndex + 3);
 
-      {/* Navigation Buttons */}
+  return (
+    <div className="relative max-w-5xl mx-auto my-16">
+      {/* Images */}
+      <div className="flex gap-4 overflow-hidden">
+        {visibleImages.map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt={`Slide ${startIndex + idx + 1}`}
+            className="w-1/3 h-48 object-cover rounded-xl shadow-md"
+          />
+        ))}
+      </div>
+
+      {/* Navigation */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 -translate-y-1/2 right-4 bg-gray-800 bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-75"
+        className="absolute top-1/2 -translate-y-1/2 right-2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
       >
         &#8592;
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 -translate-y-1/2 left-4 bg-gray-800 bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-75"
+        className="absolute top-1/2 -translate-y-1/2 left-2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
       >
         &#8594;
       </button>
-
-      {/* Dots */}
-      <div className="flex justify-center mt-4 gap-2">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              index === currentIndex ? "bg-gray-800" : "bg-gray-400"
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
-      </div>
     </div>
   );
 }
