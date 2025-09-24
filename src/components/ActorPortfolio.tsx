@@ -76,12 +76,15 @@ export default function ActorPortfolio() {
       </section>
 
       {/* About */}
-      <section className="max-w-3xl mx-auto py-16 px-6">
+      <section id="about" className="max-w-3xl mx-auto py-16 px-6">
         <h2 className="text-3xl font-bold mb-4">שלום וברכה 🎗️</h2>
         <p className="text-lg leading-relaxed">
           אני אלון דה פריז,
-          <span className="font-bold">שחקן, מאלתר, מנחה לאלתור ונגן. </span> אני
-          אוהב לצחוק, לנסות להביא אמת, לאכול מנגו בשל עם הקליפה מעל הכיור
+          <span className="font-bold">
+            {" "}
+            שחקן, מאלתר, מנחה לאלתור ונגן.{" "}
+          </span>{" "}
+          אני אוהב לצחוק, לנסות להביא אמת, לאכול מנגו בשל עם הקליפה מעל הכיור
           באימפולסיביות ותשוקה באופן שמצריך סליל שלם של חוט דנטלי לאחר מכן כדי
           להתאושש ועוד.
           <ul className="list-none p-0 m-0 text-lg leading-relaxed">
@@ -121,10 +124,15 @@ export default function ActorPortfolio() {
           אם הגעתם עד לכאן- הנה סרטון חביב מלפני עשור בשביל הנשמה ולמען תעמיק
           ההיכרות בינינו :)
         </p>
+        <video
+          className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
+          src="https://youtube.com/shorts/whO3ZaSV2Rk"
+          controls
+        />
       </section>
 
       {/* Showreel */}
-      <section className="bg-gray-100 py-16 px-6 text-center">
+      <section id="showreel" className="bg-gray-100 py-16 px-6 text-center">
         <h2 className="text-3xl font-bold mb-6">שואוריל</h2>
         <div className="aspect-video max-w-3xl mx-auto">
           <iframe
