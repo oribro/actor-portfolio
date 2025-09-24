@@ -1,8 +1,61 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Menu, X } from "lucide-react"; // install: npm install lucide-react
 
 export default function ActorPortfolio() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { label: "עליי", href: "#about" },
+    { label: "שואוריל", href: "#showreel" },
+    { label: "תפקידים", href: "#credits" },
+    { label: "צור קשר", href: "#contact" },
+  ];
+
   return (
     <div dir="rtl" className="font-sans bg-gray-50 text-gray-900 min-h-screen">
+      {/* Navbar */}
+      <header className="bg-gray-900 text-white fixed top-0 right-0 left-0 z-50 shadow-md">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+          <h1 className="text-xl font-bold">אלון דה פריז</h1>
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex gap-6 text-lg">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-blue-400 transition"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          {/* Mobile Hamburger */}
+          <button
+            className="md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="md:hidden bg-gray-800 px-6 py-4 space-y-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="block text-lg hover:text-blue-400 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </header>
       {/* Hero */}
       <section className="bg-gray-900 text-white text-center py-20 px-6">
         <motion.h1
@@ -32,7 +85,21 @@ export default function ActorPortfolio() {
           <span className="font-bold">שחקן, מאלתר, מנחה לאלתור ונגן.</span> אני
           אוהב לצחוק, לנסות להביא אמת, לאכול מנגו בשל עם הקליפה מעל הכיור
           באימפולסיביות ותשוקה באופן שמצריך סליל שלם של חוט דנטלי לאחר מכן כדי
-          להתאושש ועוד. בשנים האחרונות אני משחק במספר תיאטראות ובסרטי קולנוע
+          להתאושש ועוד. בשנים האחרונות אני משחק במספר תיאטראות ובסרטי קולנוע{" "}
+          <ul className="list-disc list-inside text-lg leading-relaxed">
+            <li>
+              *פרס השחקן הטוב ביותר- DEA Film festival, Tirana, Albania 2023 על
+              תפקידי בסרט “Touch Me” (יוצר: בוריס קאז׳דאן).
+            </li>
+            <li>
+              ציון לשבח- פסטיבל עכו 2023, על משחק ביצירה ״המשחק״ (שותף יוצר עם
+              אסף שוורצמן)
+            </li>
+            <li>
+              פרס השחקן הטוב ביותר- פסטיבל הביכורים, 2022, על תפקידי בהצגה ״טובת
+              המערכת״ (יוצר: ראם אהרוני){" "}
+            </li>
+          </ul>
           עצמאיים (בינתיים ;). חוטא בכתיבה: בתחילת 2025 אחת היצירות המקוריות
           שכתבתי ושיחקתי יחד עם שותפה עלתה בפסטיבל הסרטים בחיפה והתיאבון נפתח.
         </p>
@@ -46,6 +113,10 @@ export default function ActorPortfolio() {
           מהתחושה הזו של חשמל. כל מצמוץ, כל תזוזה קטנה בזווית הפה- והקהל מגיב.
           משהו מעניין קרה שם. ברגע שעמדתי שם על הבמה לראשונה כשחקן ולא כנגן
           ידעתי- "הכלי הבא שאלמד לנגן עליו הוא אני". והשאר היסטוריה.
+        </p>
+        <p className="text-lg leading-relaxed">
+          אם הגעתם עד לכאן- הנה סרטון חביב מלפני עשור בשביל הנשמה ולמען תעמיק
+          ההיכרות בינינו :)
         </p>
       </section>
 
