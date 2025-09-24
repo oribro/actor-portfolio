@@ -19,7 +19,7 @@ export default function ActorPortfolio() {
           transition={{ delay: 0.3 }}
           className="text-xl"
         >
-          שחקן • נגן • מאלתר
+          שחקן, יוצר ומאלתר
         </motion.p>
       </section>
 
