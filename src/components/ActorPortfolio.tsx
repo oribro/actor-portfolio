@@ -87,6 +87,7 @@ export default function ActorPortfolio() {
           אני אוהב לצחוק, לנסות להביא אמת, לאכול מנגו בשל עם הקליפה מעל הכיור
           באימפולסיביות ותשוקה באופן שמצריך סליל שלם של חוט דנטלי לאחר מכן כדי
           להתאושש ועוד.
+          <div className="text-center text-gray-400 text-3xl my-8">***</div>
           <ul className="list-none p-0 m-0 text-lg leading-relaxed">
             <li>
               ⭐<span className="font-bold">פרס השחקן הטוב ביותר</span>- DEA
