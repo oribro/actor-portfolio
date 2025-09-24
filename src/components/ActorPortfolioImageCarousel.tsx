@@ -5,7 +5,7 @@ const images: string[] = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn1XjW3cFWAvhVrs8WwIwNBKYDKeObGRPP5A&s",
   "https://improvtheater.co.il/wp-content/uploads/2023/01/improv-logo-%D7%90%D7%99%D7%9E%D7%A4%D7%A8%D7%95%D7%91-%D7%9C%D7%95%D7%92%D7%95.png",
   "https://www.teatron.org.il/wp-content/uploads/2022/09/logo.svg",
-  "https://www.habima.co.il/wp-content/themes/tyco-wp/assets/images/HABIMA-LOGO-2023-he.png",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlmImrwKLxoEt3HvVC5564UJJjqkeSWUUYXg&s",
   "https://www.tzavta.co.il/images/top_logo.svg",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzfRBuAzlpO0jWHLUaqZ39ma73Sa1T4S3qZQ&s",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Haifa_logo_official_apperence_dark_%28cropped%29.png/500px-Haifa_logo_official_apperence_dark_%28cropped%29.png",
