@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // install: npm install lucide-react
+import ImageCarousel from "./ActorPortfolioImageCarousel";
 
 export default function ActorPortfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -71,7 +72,7 @@ export default function ActorPortfolio() {
           transition={{ delay: 0.3 }}
           className="text-xl"
         >
-          שחקן, יוצר ומאלתר
+          שחקן | יוצר | מנגן | מאלתר
         </motion.p>
       </section>
 
@@ -135,37 +136,10 @@ export default function ActorPortfolio() {
         />
       </section>
 
-      {/* Showreel */}
-      <section id="showreel" className="bg-gray-100 py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">שואוריל</h2>
-        <div className="aspect-video max-w-3xl mx-auto">
-          <iframe
-            className="w-full h-full rounded-2xl shadow-lg"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Showreel"
-            frameBorder="0"
-            allowFullScreen
-          />
-        </div>
-      </section>
-
       {/* Credits */}
       <section className="max-w-4xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-8 text-center">תפקידים נבחרים</h2>
-        <ul className="grid md:grid-cols-2 gap-6 text-lg">
-          <li className="bg-white shadow-md rounded-xl p-6">
-            <strong>המלט</strong> — שייקספיר — תיאטרון הבימה
-          </li>
-          <li className="bg-white shadow-md rounded-xl p-6">
-            <strong>החייל האמיץ שווייק</strong> — תיאטרון הקאמרי
-          </li>
-          <li className="bg-white shadow-md rounded-xl p-6">
-            <strong>פאוסט</strong> — גתה — תיאטרון חיפה
-          </li>
-          <li className="bg-white shadow-md rounded-xl p-6">
-            <strong>הנסיך הקטן</strong> — עיבוד מקורי לילדים
-          </li>
-        </ul>
+        <h2 className="text-lg leading-relaxed text-center">כבר עבדנו ביחד</h2>
+        <ImageCarousel />
       </section>
 
       {/* Contact */}
